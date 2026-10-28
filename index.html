@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hydra Reborn — Der Dümmste fliegt</title>
+<style>
+:root{--bg:#07050d;--panel:#12101d;--panel2:#1b1629;--line:#3a2b55;--purple:#bd8cff;--green:#c0ff72;--muted:#aaa4bf;--white:#faf7ff;--red:#ff6d9a;--gold:#ffd779}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% -8%,#542c86 0,transparent 36%),radial-gradient(ellipse at 0% 42%,#24113e 0,transparent 34%),radial-gradient(ellipse at 50% 110%,#180e2a 0,transparent 42%),var(--bg);color:var(--white);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--green);outline-offset:3px}.wrap{max-width:1080px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:8px 0 24px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.1em}.mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#eadbff,#9b5cff 58%,#6529bd);display:grid;place-items:center;color:#100b1d;font-size:23px;box-shadow:0 0 24px #a56aff55, inset 0 1px 0 #fff8}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.23em}.pill{border:1px solid #394a36;background:#112018;color:var(--green);padding:6px 11px;border-radius:99px;font-size:11px;font-weight:800}.hero{padding:32px 0 28px;display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center}.eyebrow{color:var(--green);text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:900}.hero h1{font-size:clamp(39px,7vw,70px);line-height:.98;letter-spacing:-.06em;margin:13px 0}.hero h1 span{color:var(--purple)}p{color:var(--muted)}.hero p{max-width:580px;font-size:16px}.art{min-height:215px;border:1px solid #403358;border-radius:25px;background:linear-gradient(145deg,#211a34,#10151a 72%);display:grid;place-items:center;position:relative;overflow:hidden}.orb{width:145px;height:145px;border-radius:50%;border:2px solid #a78bfa88;box-shadow:0 0 55px #9c7bff30,inset 0 0 35px #9c7bff20;display:grid;place-items:center;font-size:70px}.art:after{content:"PRIVATE GAME NETWORK";position:absolute;bottom:16px;letter-spacing:.22em;font-size:9px;color:#aaa0c8}.layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{background:linear-gradient(145deg,#191326ee,#0e0b16f5);border:1px solid #493366;border-radius:18px;padding:21px;box-shadow:0 12px 34px #0004,inset 0 1px 0 #ffffff08;transition:transform .2s,border-color .2s,box-shadow .2s}.panel:hover{border-color:#8b5bd0;box-shadow:0 14px 40px #6b2bb51c,inset 0 1px 0 #ffffff0c}.panel h2{margin:0;font-size:21px;letter-spacing:-.03em}.panel h3{margin:8px 0}.panel p{margin:7px 0 17px;font-size:13px}.icon{width:48px;height:48px;border-radius:14px;background:#29203e;border:1px solid #4b3c6e;display:grid;place-items:center;font-size:25px;margin-bottom:16px}.panel:nth-child(2) .icon{background:#162c20;border-color:#2e593b}.btn{padding:11px 15px;border-radius:11px;font-weight:850;background:linear-gradient(135deg,#d4ff91,#a7f45b);color:#15120c;border:1px solid #e4ffc0;box-shadow:0 4px 18px #a9ff5930;transition:transform .15s,filter .15s,box-shadow .15s}.btn:hover{transform:translateY(-1px);box-shadow:0 7px 22px #a9ff5940}.btn:hover{filter:brightness(1.07)}.btn.secondary{background:linear-gradient(135deg,#382354,#21152f);color:#f0e5ff;border:1px solid #7953a7;box-shadow:0 4px 18px #8b4de51c}.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--muted)}.btn.danger{background:#351822;color:#ff9aac;border:1px solid #703143}.btn:disabled{opacity:.4;cursor:not-allowed}.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center}.field{display:flex;flex-direction:column;gap:6px;margin:12px 0}.field label{font-size:12px;color:#c5c9d8;font-weight:700}.field input,.field select,.input{width:100%;background:#090b12;color:white;border:1px solid #343849;border-radius:10px;padding:11px}.players{display:flex;flex-wrap:wrap;gap:8px;margin:13px 0}.player-chip{background:#202333;border:1px solid #35394e;border-radius:10px;padding:8px 10px;font-size:13px}.muted{color:var(--muted);font-size:12px}.rule{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}.rule:last-child{border:0}.rule b{display:block}.heart{color:var(--red);letter-spacing:2px}.hide{display:none!important}.overlay{position:fixed;inset:0;z-index:10;background:#05020ced;backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:16px}.overlay.show{display:flex}.modal{width:min(800px,100%);max-height:94vh;overflow:auto;background:linear-gradient(145deg,#191126,#0d0a14 75%);border:1px solid #6a438f;border-radius:22px;padding:22px;box-shadow:0 30px 100px #000b,0 0 55px #8b43d51a,inset 0 1px 0 #ffffff0b}.modal-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.modal-head h2{margin:3px 0;font-size:24px}.close{background:#242634;color:#ddd;border-radius:10px;width:37px;height:37px}.timer{font-size:clamp(37px,8vw,58px);font-weight:950;letter-spacing:-.06em;font-variant-numeric:tabular-nums}.timer.warn{color:var(--red)}.game-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:16px 0}.bar{height:6px;background:#282b39;border-radius:99px;overflow:hidden}.bar div{height:100%;background:linear-gradient(90deg,var(--purple),var(--green));width:100%;transition:width .5s linear}.gamegrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:15px}.subpanel{background:linear-gradient(145deg,#211832,#15111f);border:1px solid #3f2d5c;border-radius:14px;padding:15px;box-shadow:inset 0 1px 0 #ffffff07}.subpanel h3{margin:0 0 8px}.event{border:1px solid #68532b;background:#2b2415;color:var(--gold);border-radius:12px;padding:12px;margin:12px 0}.vote-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}.vote-btn{background:#1c1f2e;color:white;border:1px solid #363a50;border-radius:11px;padding:12px;text-align:left}.vote-btn.selected{border-color:var(--purple);background:#2a2141}.vote-btn:disabled{opacity:.45}.hearts{color:var(--red);font-weight:900;letter-spacing:3px}.feedback{padding:12px;border-radius:11px;background:#211832;border:1px solid #3d2b58;color:#e9def8;margin:12px 0}.rules-drawer{border:1px solid #5a3a7d;background:#171020;border-radius:13px;overflow:hidden}.rules-drawer summary{cursor:pointer;padding:13px 15px;font-weight:850;color:#e3cfff;list-style:none}.rules-drawer summary::-webkit-details-marker{display:none}.rules-drawer summary:after{content:'＋';float:right;color:var(--purple)}.rules-drawer[open] summary:after{content:'−'}.rules-drawer-content{padding:0 15px 10px;border-top:1px solid #38264d}.rules-drawer .rule{border-color:#332440}.status{font-size:12px;color:var(--muted)}.foot{text-align:center;padding:30px 0 14px;color:#777d91;font-size:11px}
+@media(max-width:700px){.wrap{padding:15px}.hero{grid-template-columns:1fr;padding:22px 0}.art{min-height:150px}.orb{width:100px;height:100px;font-size:48px}.layout,.gamegrid{grid-template-columns:1fr}.vote-list{grid-template-columns:1fr}.top{align-items:flex-start}}
+</style></head><body><main class="wrap">
+<header class="top"><div class="brand"><div class="mark">Ψ</div><div>HYDRA REBORN<small>PRIVATE GAME NETWORK</small></div></div><div class="pill">● GAME LAB · V1</div></header>
+<section class="hero"><div><div class="eyebrow">▰ Dein Server. Eure Regeln.</div><h1>HYDRA<br><span>GAME NIGHT.</span></h1><p>Private Party-Games für euren Discord-Server. Wählt ein Spiel und startet eure nächste Runde mit Freunden.</p></div><div class="art"><div class="orb">🐍</div></div></section>
+<section class="panel" style="margin-bottom:16px;border-color:#7950a6;background:linear-gradient(120deg,#201332,#100c18)">
+<div class="row" style="justify-content:space-between;align-items:center">
+  <div style="flex:1;min-width:220px"><div class="eyebrow">NÄCHSTER SCHRITT · ONLINE-LOBBY</div><h2 style="margin-top:5px">Mit Freunden spielen</h2><p style="margin:7px 0 0">Gastnamen eingeben, Raum erstellen oder mit einem Raumcode beitreten – die Oberfläche ist vorbereitet.</p></div>
+  <button class="btn" onclick="openOnlineLobby()">Online-Lobby öffnen →</button>
+</div>
+<div class="muted" style="margin-top:10px">Vorschau: Raumcodes sind hier noch nicht zwischen Geräten synchronisiert. Der echte Online-Server kommt im nächsten Schritt.</div>
+</section>
+<div class="layout">
+<section class="panel"><div class="icon">🎙️</div><div class="eyebrow">PARTY-GAME 01</div><h2>Der Dümmste fliegt</h2><p>Diskutieren, Hinweise sammeln und geheim abstimmen. Spielt mit echter Spielleitung oder lasst den Chaos-Modus übernehmen.</p><button class="btn" onclick="openGameSelect('dumm')">Spiel auswählen →</button></section>
+<section class="panel"><div class="icon">📏</div><div class="eyebrow">PARTY-GAME 02</div><h2>Schätz-Duell</h2><p>Schätzfragen mit Zahlen-Balken oder Zeitlinien. Wer näher an der richtigen Antwort liegt, bekommt mehr Punkte.</p><button class="btn secondary" onclick="openGameSelect('estimate')">Schätz-Duell öffnen →</button></section>
+</div>
+<section class="panel" style="margin-top:16px">
+<h2>Die Spiele im Überblick</h2>
+<div class="gamegrid">
+<div class="subpanel"><h3>🎙️ Der Dümmste fliegt</h3><p>Wählt nach dem Öffnen zwischen zwei Spielvarianten:</p><ul><li><b>Moderator-Modus:</b> Eine Person steuert Hinweise, Events und Timer.</li><li><b>Chaos-Modus:</b> Die Website lässt Hinweise, Events und Voting automatisch ablaufen.</li></ul><p>Alle starten mit 3 Herzen. Wer im geheimen Voting die meisten Stimmen bekommt, verliert ein Herz. Bei 0 Herzen scheidet man aus.</p></div>
+<div class="subpanel"><h3>📏 Schätz-Duell</h3><p>Alle beantworten dieselbe Schätzfrage über einen Zahlen-Balken oder eine Zeitlinie. Nach dem Auflösen werden Punkte nach Nähe zur richtigen Antwort vergeben.</p><ul><li>Je näher die Schätzung, desto mehr Punkte.</li><li>Exakte Treffer bringen die Höchstpunktzahl.</li><li>Die Rangliste zeigt, wer insgesamt vorne liegt.</li></ul><div class="muted">Im Prototyp ist das Schätz-Duell eine lokale Demo auf einem Gerät, noch kein synchronisiertes Online-Spiel.</div></div>
+</div>
+<div class="event" style="margin-top:14px"><b>Hinweis zum Prototyp:</b> Die Website ist noch nicht online und hat noch keinen gemeinsamen Multiplayer-Server. Abstimmungen und Schätzungen werden lokal in diesem Browser simuliert.</div>
+</section>
+<section class="panel" style="margin-top:16px"><h2>Spielregeln</h2><div class="rule"><span>♥</span><div><b>3 Herzen pro Spieler</b><span class="muted">Bei jedem verlorenen Voting ein Herz weniger. Bei 0 Herzen ausgeschieden.</span></div></div><div class="rule"><span>◷</span><div><b>3 Minuten pro Runde</b><span class="muted">Diskutieren, Hinweise sammeln und andere überzeugen.</span></div></div><div class="rule"><span>◉</span><div><b>Geheime Abstimmung</b><span class="muted">Stimmen bleiben bis zur Auswertung verborgen. Höchste Stimmenzahl verliert ein Herz.</span></div></div><div class="rule"><span>⚖</span><div><b>Gleichstand</b><span class="muted">Stichwahl zwischen den Betroffenen. Bei erneutem Gleichstand entscheidet eine zufällige Auswahl aus den Gleichplatzierten.</span></div></div></section>
+<div class="foot">HYDRA REBORN · BROWSER-PROTOTYP · Multiplayer/Server-Speicherung noch nicht verbunden</div>
+</main>
+<div class="overlay" id="overlay"><div class="modal"><div class="modal-head"><div><div class="eyebrow" id="modeLabel">LOBBY SETUP</div><h2 id="modalTitle">Lobby erstellen</h2></div><button class="close" onclick="closeModal()" aria-label="Schließen">✕</button></div><div id="body"></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./supabase-config.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const questions=[
+{q:"Wie viele Monate haben 28 Tage?",hint:"Denk nicht nur an den kürzesten Monat.",answers:["Nur Februar","Alle 12","6 Monate","Keiner"],correct:1,why:"Alle Monate haben mindestens 28 Tage."},
+{q:"Ein Hahn legt ein Ei auf ein Dach. Wohin rollt es?",hint:"Hier ist das Tier wichtiger als die Physik.",answers:["Links","Rechts","Nach vorne","Gar nicht"],correct:3,why:"Hähne legen keine Eier."},
+{q:"Was wiegt mehr: 1 kg Federn oder 1 kg Eisen?",hint:"Achte auf die Einheit.",answers:["Federn","Eisen","Gleich viel","Kommt aufs Wetter an"],correct:2,why:"Beides wiegt ein Kilogramm."},
+{q:"Du überholst beim Rennen den Zweiten. Auf welchem Platz bist du?",hint:"Du nimmst den Platz der Person ein, die du überholst.",answers:["Erster","Zweiter","Dritter","Letzter"],correct:1,why:"Du bist jetzt Zweiter."},
+{q:"Wie oft kannst du 10 von 100 abziehen?",hint:"Lies die Frage ganz genau.",answers:["10-mal","9-mal","Einmal","Unendlich"],correct:2,why:"Nach dem ersten Mal ziehst du von 90 ab."},
+{q:"Was wird nasser, je mehr es trocknet?",hint:"Du findest es oft im Badezimmer.",answers:["Sand","Ein Handtuch","Ein Föhn","Seife"],correct:1,why:"Ein Handtuch nimmt Wasser auf."},
+{q:"Wie viele Tiere jeder Art nahm Moses mit auf die Arche?",hint:"Die Person in der Frage ist der Trick.",answers:["Zwei","Sieben","Keine","Alle"],correct:2,why:"Noah, nicht Moses, hatte die Arche."}
+];
+const estimateQuestions=[
+{q:"Wie hoch ist der Eiffelturm inklusive Spitze?",kind:"bar",min:0,max:500,answer:330,unit:"Meter",hint:"Die Antwort liegt etwas über 300 Metern."},
+{q:"Wie viele Sekunden braucht Licht ungefähr von der Sonne bis zur Erde?",kind:"bar",min:0,max:1000,answer:500,unit:"Sekunden",hint:"Ungefähr acht Minuten und zwanzig Sekunden."},
+{q:"In welchem Jahr wurde der erste iPhone veröffentlicht?",kind:"timeline",min:1990,max:2025,answer:2007,unit:"Jahr",hint:"Es war in den späten 2000ern."},
+{q:"Wie lang ist ein Marathon?",kind:"bar",min:0,max:60,answer:42.195,unit:"Kilometer",hint:"Etwas mehr als 42 Kilometer."},
+{q:"In welchem Jahr fiel die Berliner Mauer?",kind:"timeline",min:1940,max:2000,answer:1989,unit:"Jahr",hint:"Ende der 1980er."},
+{q:"Wie viele Knochen hat ein erwachsener Mensch ungefähr?",kind:"bar",min:0,max:400,answer:206,unit:"Knochen",hint:"Etwas über 200."}
+];
+let estimateState={players:[],scores:{},round:0,index:0,answers:{},phase:'setup'};
+let previewRooms = {};
+let hydraSupabase = null;
+let hydraCurrentRoom = null;
+let hydraRoomChannel = null;
+
+function hydraClient(){
+ if(hydraSupabase) return hydraSupabase;
+ const cfg = window.HYDRA_SUPABASE_CONFIG;
+ if(!cfg || !cfg.url || !cfg.anonKey || cfg.url.includes("YOUR-PROJECT") || cfg.anonKey.includes("YOUR_SUPABASE")){
+   return null;
+ }
+ if(!window.supabase || !window.supabase.createClient) return null;
+ hydraSupabase = window.supabase.createClient(cfg.url, cfg.anonKey);
+ return hydraSupabase;
+}
+async function ensureHydraGuest(){
+ const client = hydraClient();
+ if(!client) throw new Error("Die Supabase-Konfiguration fehlt noch. Bitte public/supabase-config.js aus der Vorlage erstellen und Project URL + Publishable Key eintragen.");
+ let {data:{session}, error} = await client.auth.getSession();
+ if(error) throw error;
+ if(!session){
+   const result = await client.auth.signInAnonymously();
+   if(result.error) throw result.error;
+ }
+ const {data:{user}, error:userError} = await client.auth.getUser();
+ if(userError) throw userError;
+ return {client,user};
+}
+function hydraRoomCode(){
+ const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+ let code='';
+ for(let i=0;i<6;i++) code+=chars[Math.floor(Math.random()*chars.length)];
+ return code;
+}
+function openOnlineLobby(){
+ $('overlay').classList.add('show');
+ $('modeLabel').textContent='ONLINE · LOBBY';
+ $('modalTitle').textContent='Raum erstellen oder beitreten';
+ $('body').innerHTML=`<p>Spielt ohne Account: Gastnamen reichen. Erstelle einen Raum und teile den sechsstelligen Code im Discord.</p>
+ <div class="gamegrid">
+  <div class="subpanel"><div class="icon">✦</div><h3>Neuen Raum erstellen</h3>
+   <div class="field"><label for="hostGuestName">Dein Gastname</label><input id="hostGuestName" maxlength="20" placeholder="z. B. HydraBoss" autocomplete="nickname"></div>
+   <div class="field"><label for="hostGame">Spiel auswählen</label><select id="hostGame"><option value="dumm">Der Dümmste fliegt</option><option value="estimate">Schätz-Duell</option></select></div>
+   <button class="btn" onclick="createOnlineRoom()">Raum erstellen →</button>
+  </div>
+  <div class="subpanel"><div class="icon">⌁</div><h3>Raumcode eingeben</h3>
+   <div class="field"><label for="joinGuestName">Dein Gastname</label><input id="joinGuestName" maxlength="20" placeholder="z. B. Shadow" autocomplete="nickname"></div>
+   <div class="field"><label for="joinRoomCode">6-stelliger Raumcode</label><input id="joinRoomCode" maxlength="6" placeholder="ABC123" autocapitalize="characters" style="text-transform:uppercase"></div>
+   <button class="btn secondary" onclick="joinOnlineRoom()">Raum beitreten →</button>
+  </div>
+ </div><div id="onlineLobbyResult"></div>
+ <p class="muted">Online-Verbindung wird verwendet, sobald die lokale Supabase-Konfiguration eingetragen ist.</p>`;
+}
+function showOnlineError(err){
+ const out = $('onlineLobbyResult');
+ if(out) out.innerHTML=`<div class="feedback"><b>Das hat noch nicht geklappt.</b><br>${escapeHtml(err?.message || String(err))}</div>`;
+}
+async function createOnlineRoom(){
+ const name=($('hostGuestName')?.value||'').trim().slice(0,20);
+ if(!name){alert('Bitte gib einen Gastnamen ein.');return}
+ const button = document.querySelector('#body button[onclick="createOnlineRoom()"]');
+ if(button){button.disabled=true;button.textContent='Raum wird erstellt…'}
+ try{
+   const {client,user}=await ensureHydraGuest();
+   const game=$('hostGame').value;
+   let room=null, lastError=null;
+   for(let attempt=0;attempt<5;attempt++){
+     const code=hydraRoomCode();
+     const result=await client.from('rooms').insert({code,game,host_id:user.id,status:'waiting'}).select('id,code,game,host_id,status').single();
+     if(!result.error){room=result.data;break;}
+     lastError=result.error;
+     if(!String(result.error.message||'').toLowerCase().includes('duplicate')) throw result.error;
+   }
+   if(!room) throw lastError || new Error('Es konnte kein eindeutiger Raumcode erstellt werden.');
+   const {error:playerError}=await client.from('room_players').insert({room_id:room.id,user_id:user.id,nickname:name,is_host:true});
+   if(playerError) throw playerError;
+   hydraCurrentRoom=room;
+   renderOnlineRoom(room,name,true);
+   subscribeToRoom(room.id);
+ }catch(err){showOnlineError(err)}
+ finally{if(button){button.disabled=false;button.textContent='Raum erstellen →'}}
+}
+async function joinOnlineRoom(){
+ const name=($('joinGuestName')?.value||'').trim().slice(0,20);
+ const code=($('joinRoomCode')?.value||'').trim().toUpperCase();
+ if(!name){alert('Bitte gib einen Gastnamen ein.');return}
+ if(!/^[A-HJ-NP-Z2-9]{6}$/.test(code)){alert('Bitte gib einen gültigen sechsstelligen Raumcode ein.');return}
+ const button = document.querySelector('#body button[onclick="joinOnlineRoom()"]');
+ if(button){button.disabled=true;button.textContent='Suche Raum…'}
+ try{
+   const {client}=await ensureHydraGuest();
+   const {data,error}=await client.rpc('join_hydra_room',{p_code:code,p_nickname:name});
+   if(error) throw error;
+   const row=Array.isArray(data)?data[0]:data;
+   if(!row) throw new Error('Raum nicht gefunden oder nicht mehr offen.');
+   const {data:room,error:roomError}=await client.from('rooms').select('id,code,game,host_id,status').eq('id',row.joined_room_id).single();
+   if(roomError) throw roomError;
+   hydraCurrentRoom=room;
+   renderOnlineRoom(room,name,false);
+   subscribeToRoom(room.id);
+ }catch(err){showOnlineError(err)}
+ finally{if(button){button.disabled=false;button.textContent='Raum beitreten →'}}
+}
+async function renderOnlineRoom(room,name,isHost){
+ const out=$('onlineLobbyResult');
+ if(!out)return;
+ let playerList=[];
+ try{
+   const client=hydraClient();
+   const {data,error}=await client.from('room_players').select('nickname,is_host').eq('room_id',room.id).order('joined_at');
+   if(error) throw error;
+   playerList=data||[];
+ }catch(err){showOnlineError(err);return}
+ out.innerHTML=`<div class="subpanel" style="margin-top:14px;border-color:#8e5ac3"><div class="eyebrow">${isHost?'RAUM ERSTELLT':'DEM RAUM BEIGETRETEN'}</div><h3>Raumcode: <span style="color:var(--green);letter-spacing:.12em">${escapeHtml(room.code)}</span></h3><p>Teile diesen Code im Discord. Freunde können ihn auf ihren eigenen Geräten eingeben.</p><div class="row"><button class="btn secondary" onclick="copyRoomCode('${escapeHtml(room.code)}')">Raumcode kopieren</button><span class="muted">${room.game==='estimate'?'Schätz-Duell':'Der Dümmste fliegt'}</span></div><h3 style="margin-top:16px">Spieler (<span id="onlinePlayerCount">${playerList.length}</span>)</h3><div class="players" id="onlinePlayerList">${playerList.map(p=>`<span class="player-chip">◉ ${escapeHtml(p.nickname)}${p.is_host?' · Host':''}</span>`).join('')}</div><div class="event"><b>Lobby ist online.</b> Spielerlisten werden über Supabase aktualisiert. Der Spielablauf selbst muss noch als nächster Schritt mit dem Server synchronisiert werden.</div></div>`;
+}
+function subscribeToRoom(roomId){
+ if(hydraRoomChannel && hydraSupabase) hydraSupabase.removeChannel(hydraRoomChannel);
+ const client=hydraClient();
+ if(!client)return;
+ hydraRoomChannel=client.channel('hydra-room-'+roomId)
+  .on('postgres_changes',{event:'*',schema:'public',table:'room_players',filter:'room_id=eq.'+roomId},async()=>{
+    if(hydraCurrentRoom){
+      const host = hydraCurrentRoom.host_id === (await client.auth.getUser()).data.user?.id;
+      renderOnlineRoom(hydraCurrentRoom,'',host);
+    }
+  }).subscribe();
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function copyRoomCode(code){
+ if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(code).then(()=>alert('Raumcode kopiert: '+code)).catch(()=>alert('Raumcode: '+code));
+ else alert('Raumcode: '+code);
+}
+
+function openGameSelect(game){
+ $('overlay').classList.add('show');
+ if(game==='estimate'){openEstimateSetup();return}
+ $('modeLabel').textContent='SPIEL AUSWÄHLEN';$('modalTitle').textContent='Der Dümmste fliegt';
+ $('body').innerHTML=`<p>Wie soll die Runde laufen? Beide Modi nutzen dieselben Herzen- und Voting-Regeln.</p><div class="gamegrid"><div class="subpanel"><div class="icon">🎙️</div><h3>Moderator-Modus</h3><p>Eine Person gibt Hinweise, startet Chaos-Events und steuert den Timer.</p><button class="btn" onclick="openSetup('mod')">Mit Moderator spielen →</button></div><div class="subpanel"><div class="icon">⚡</div><h3>Chaos-Modus</h3><p>Timer, Hinweise, Events und Voting laufen automatisch ab.</p><button class="btn secondary" onclick="openSetup('auto')">Automatisch spielen →</button></div></div><div class="rules-mode-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px;margin-top:16px">
+  <details class="rules-drawer" open>
+    <summary>🎙️ Regeln: Moderator-Modus</summary>
+    <div class="rules-drawer-content">
+      <p class="muted" style="margin:10px 0">Eine Person übernimmt die Spielleitung und steuert den Ablauf aktiv.</p>
+      <div class="rule"><span class="heart">♥</span><div><b>1. Start mit 3 Herzen</b><span class="muted">Jeder aktive Spieler beginnt mit drei Herzen. Bei 0 Herzen scheidet man aus.</span></div></div>
+      <div class="rule"><span>🗣️</span><div><b>2. Die Spielleitung gibt Hinweise</b><span class="muted">Der Moderator kann Hinweise und eigene Ansagen veröffentlichen sowie Chaos-Events auslösen.</span></div></div>
+      <div class="rule"><span>⏱️</span><div><b>3. Zeit flexibel steuern</b><span class="muted">Die Runde dauert regulär 3 Minuten. Der Moderator kann 30 Sekunden hinzufügen oder abziehen und die Runde vorzeitig beenden.</span></div></div>
+      <div class="rule"><span>🗳️</span><div><b>4. Voting starten</b><span class="muted">Die Spielleitung startet die Abstimmung, wenn die Runde endet. Jeder aktive Spieler stimmt geheim für eine andere Person ab.</span></div></div>
+      <div class="rule"><span>⚖️</span><div><b>5. Ergebnis & Gleichstand</b><span class="muted">Wer die meisten Stimmen erhält, verliert ein Herz. Bei Gleichstand wird in dieser Demo zufällig eine der Personen mit den meisten Stimmen ausgewählt.</span></div></div>
+      <p class="muted" style="font-size:12px;margin-top:10px">Gut für Gruppen, die eine Person als Spielleiter haben und den Ablauf selbst bestimmen möchten.</p>
+    </div>
+  </details>
+  <details class="rules-drawer" open>
+    <summary>⚡ Regeln: Chaos-Modus</summary>
+    <div class="rules-drawer-content">
+      <p class="muted" style="margin:10px 0">Das Spiel steuert Hinweise, Events und Voting automatisch – ohne dass jemand moderieren muss.</p>
+      <div class="rule"><span class="heart">♥</span><div><b>1. Start mit 3 Herzen</b><span class="muted">Jeder aktive Spieler beginnt mit drei Herzen. Bei 0 Herzen scheidet man aus.</span></div></div>
+      <div class="rule"><span>💡</span><div><b>2. Automatische Hinweise</b><span class="muted">Bei 2:00, 1:00 und 0:30 verbleibender Zeit erscheinen automatisch Hinweise.</span></div></div>
+      <div class="rule"><span>🎲</span><div><b>3. Chaos-Events</b><span class="muted">Das Spiel löst automatisch Ereignisse aus. Niemand muss sie manuell starten.</span></div></div>
+      <div class="rule"><span>🗳️</span><div><b>4. Automatisches Voting</b><span class="muted">Nach 3 Minuten startet die Abstimmung automatisch. Jeder aktive Spieler stimmt geheim für eine andere Person ab.</span></div></div>
+      <div class="rule"><span>⚖️</span><div><b>5. Ergebnis & Gleichstand</b><span class="muted">Wer die meisten Stimmen erhält, verliert ein Herz. Bei Gleichstand wird in dieser Demo zufällig eine der Personen mit den meisten Stimmen ausgewählt.</span></div></div>
+      <p class="muted" style="font-size:12px;margin-top:10px">Gut für Gruppen, die direkt losspielen wollen und einen automatischen Ablauf bevorzugen.</p>
+    </div>
+  </details>
+</div>
+<button class="btn ghost" style="margin-top:14px" onclick="closeModal()">Zurück</button>`;
+}
+function openEstimateSetup(){
+ estimateState={players:[],scores:{},round:0,index:0,answers:{},phase:'setup'};
+ $('modeLabel').textContent='PARTY-GAME 02 · SCHÄTZ-DUELL';$('modalTitle').textContent='Schätz-Duell einrichten';
+ $('body').innerHTML=`<p>Gebt die Spielernamen ein. Jede Frage wird über einen Zahlen-Balken oder eine Zeitlinie beantwortet. Je näher die Schätzung an der Lösung liegt, desto mehr Punkte gibt es.</p><div class="field"><label for="estnames">Spieler (ein Name pro Zeile oder mit Komma trennen)</label><textarea id="estnames" class="input" rows="4" placeholder="Luna, Shadow, Kevin, Alex"></textarea></div><div class="field"><label for="estrounds">Anzahl der Fragen</label><select id="estrounds"><option value="5">5 Fragen</option><option value="3">3 Fragen</option><option value="6">6 Fragen</option></select></div><div class="row"><button class="btn" onclick="startEstimate()">Schätz-Duell starten →</button><button class="btn ghost" onclick="closeModal()">Abbrechen</button></div><p class="muted">Demo: Alle Schätzungen werden nacheinander auf demselben Gerät eingegeben.</p>`;
+}
+function startEstimate(){
+ const names=($('estnames')?.value||'').split(/[，,\n]/).map(n=>n.trim().slice(0,20)).filter(Boolean);
+ if(new Set(names).size<2){alert('Bitte mindestens 2 unterschiedliche Spielernamen eingeben.');return}
+ estimateState.players=[...new Set(names)].slice(0,20);estimateState.players.forEach(n=>estimateState.scores[n]=0);
+ estimateState.total=Number($('estrounds').value);estimateState.index=0;estimateState.round=1;estimateState.answers={};estimateState.phase='answer';renderEstimate();
+}
+function renderEstimate(){
+ const q=estimateQuestions[estimateState.index%estimateQuestions.length];
+ $('modalTitle').textContent='Schätz-Duell · Frage '+estimateState.round;
+ const isTime=q.kind==='timeline';
+ $('body').innerHTML=`<div class="eyebrow">${isTime?'ZEITLINIE':'ZAHLEN-BALKEN'} · FRAGE ${estimateState.round}/${estimateState.total}</div><h3 style="font-size:22px">${q.q}</h3><p>Jeder Spieler gibt seine Schätzung ab. Punkte werden nach der Entfernung zur richtigen Antwort vergeben.</p><div class="subpanel"><div class="row" style="justify-content:space-between"><span>${q.min} ${q.unit}</span><span>${q.max} ${q.unit}</span></div><input id="estimateSlider" type="range" min="${q.min}" max="${q.max}" step="${q.kind==='timeline'?1:(q.max<=60?0.1:1)}" value="${(q.min+q.max)/2}" style="width:100%;accent-color:var(--green)" oninput="document.getElementById('estimateValue').textContent=this.value+' ${q.unit}'"><div class="feedback" style="text-align:center;font-size:20px;font-weight:900" id="estimateValue">${(q.min+q.max)/2} ${q.unit}</div></div><div class="field"><label for="estimatePlayer">Wer gibt gerade seine Schätzung ab?</label><select id="estimatePlayer">${estimateState.players.filter(n=>estimateState.answers[n]===undefined).map(n=>`<option value="${esc(n)}">${esc(n)}</option>`).join('')}</select></div><div class="row"><button class="btn" onclick="submitEstimate()">Schätzung abgeben →</button><button class="btn ghost" onclick="closeModal()">Beenden</button></div><div class="muted">Bisher abgegeben: ${Object.keys(estimateState.answers).length} von ${estimateState.players.length}</div>`;
+}
+function submitEstimate(){
+ const player=$('estimatePlayer')?.value;if(!player)return;
+ estimateState.answers[player]=Number($('estimateSlider').value);
+ if(Object.keys(estimateState.answers).length<estimateState.players.length){renderEstimate();return}
+ revealEstimate();
+}
+function revealEstimate(){
+ const q=estimateQuestions[estimateState.index%estimateQuestions.length];
+ const distances=estimateState.players.map(n=>[n,Math.abs(estimateState.answers[n]-q.answer)]);
+ const maxDistance=Math.max(1,q.max-q.min);
+ const rows=distances.map(([n,d])=>{const points=Math.max(0,Math.round(1000*(1-d/maxDistance)));estimateState.scores[n]+=points;return {n,d,points,value:estimateState.answers[n]}}).sort((a,b)=>b.points-a.points);
+ estimateState.phase='result';
+ $('modalTitle').textContent='Auflösung · '+q.answer+' '+q.unit;
+ $('body').innerHTML=`<div class="eyebrow">RICHTIGE ANTWORT</div><h2 style="font-size:34px;color:var(--green)">${q.answer} ${q.unit}</h2><p>${q.hint}</p><h3>Rundenergebnis</h3>${rows.map((r,i)=>`<div class="rule"><span>${i+1}.</span><div style="flex:1"><b>${esc(r.n)} — ${r.value} ${q.unit}</b><span class="muted">Abweichung: ${Number(r.d.toFixed(2))} ${q.unit}</span></div><b style="color:var(--green)">+${r.points} Pkt.</b></div>`).join('')}<h3 style="margin-top:20px">Gesamtwertung</h3>${Object.entries(estimateState.scores).sort((a,b)=>b[1]-a[1]).map(([n,p],i)=>`<div class="rule"><span>${i+1}.</span><b style="flex:1">${esc(n)}</b><b>${p} Punkte</b></div>`).join('')}<div class="row" style="margin-top:18px"><button class="btn" onclick="nextEstimate()">Nächste Frage →</button><button class="btn ghost" onclick="closeModal()">Schließen</button></div><p class="muted">Punkte: bis zu 1.000 pro Frage; je kleiner die Abweichung, desto mehr Punkte.</p>`;
+}
+function nextEstimate(){
+ if(estimateState.round>=estimateState.total){$('modalTitle').textContent='Schätz-Duell beendet';$('body').innerHTML=`<h2>🏆 Endstand</h2>${Object.entries(estimateState.scores).sort((a,b)=>b[1]-a[1]).map(([n,p],i)=>`<div class="rule"><span>${i===0?'🏆':i+1+'.'}</span><b style="flex:1">${esc(n)}</b><b>${p} Punkte</b></div>`).join('')}<div class="row"><button class="btn" onclick="openEstimateSetup()">Neue Runde →</button><button class="btn ghost" onclick="closeModal()">Schließen</button></div>`;return}
+ estimateState.round++;estimateState.index++;estimateState.answers={};estimateState.phase='answer';renderEstimate();
+}
+const events=[
+{title:"CHAOS-EVENT · Doppelte Gefahr",text:"Die Diskussion wird heiß: Moderator, gib einen zusätzlichen Hinweis oder halte ihn zurück."},
+{title:"CHAOS-EVENT · Blitzrunde",text:"Alle haben 15 Sekunden, ihre letzte Verteidigung zu posten!"},
+{title:"CHAOS-EVENT · Verdächtiger Hinweis",text:"Ein Hinweis wird freigeschaltet. Er kann helfen – oder euch komplett verwirren."},
+{title:"CHAOS-EVENT · Namen im Hut",text:"Moderator, wähle jetzt einen Spieler, der seine Strategie erklären muss."}
+];
+let state={mode:'mod',players:[],hearts:{},alive:[],round:0,question:0,seconds:180,timer:null,phase:'setup',votes:{},voted:new Set(),selected:null,score:0,host:'',usedEvents:[],tie:[],autoHint:false,chaosCount:0};
+function openSetup(mode){state={...state,mode,players:[],hearts:{},alive:[],round:0,question:0,seconds:180,timer:null,phase:'setup',votes:{},voted:new Set(),selected:null,score:0,host:'',usedEvents:[],tie:[],autoHint:false,chaosCount:0};$('overlay').classList.add('show');$('modeLabel').textContent=mode==='mod'?'MODUS 01 · MODERATOR':'MODUS 02 · CHAOS';$('modalTitle').textContent='Lobby erstellen';renderSetup()}
+function closeModal(){if(state.timer)clearInterval(state.timer);state.timer=null;$('overlay').classList.remove('show')}
+function renderSetup(){
+$('body').innerHTML=`<p>Fügt die Spieler für diese Demo-Lobby hinzu. Jeder startet mit drei Herzen. Für eine echte Online-Runde muss später ein gemeinsamer Server verbunden werden.</p><div class="field"><label for="host">Spielername für dich</label><input id="host" maxlength="20" placeholder="z. B. HydraBoss" value="HydraBoss"></div><div class="field"><label for="names">Mitspieler (ein Name pro Zeile oder mit Komma trennen)</label><textarea id="names" class="input" rows="3" placeholder="Luna, Shadow, Kevin, Alex"></textarea></div>${state.mode==='mod'?'<div class="field"><label for="hostrole">Moderator</label><select id="hostrole"><option value="host">Ich bin Moderator und spiele nicht mit</option><option value="player">Ich moderiere und spiele mit</option></select></div>':'<div class="feedback">⚡ Die Website übernimmt Timer, Fragen, Chaos-Events und Voting automatisch.</div>'}<div class="row"><button class="btn" onclick="createLobby()">Lobby starten →</button><button class="btn ghost" onclick="closeModal()">Abbrechen</button></div><p class="muted">Tipp: Für eine schnelle Demo gib mindestens 3 Spielernamen ein. Namen und Herzen werden nur in diesem Browser verarbeitet.</p>`;
+}
+function createLobby(){let host=($('host')?.value||'HydraBoss').trim().slice(0,20)||'HydraBoss';let names=($('names')?.value||'').split(/[,\n]/).map(n=>n.trim().slice(0,20)).filter(Boolean);let role=$('hostrole')?.value||'host';state.host=host;state.players=[...new Set(names)];if(state.mode==='mod'&&role==='player')state.players.unshift(host);if(state.players.length<3){alert('Bitte mindestens 3 Spieler-Namen eingeben.');return}state.players=state.players.slice(0,20);state.alive=[...state.players];state.hearts={};state.players.forEach(n=>state.hearts[n]=3);state.round=1;state.question=Math.floor(Math.random()*questions.length);state.seconds=180;state.phase='playing';state.votes={};state.voted=new Set();state.selected=null;state.usedEvents=[];state.chaosCount=0;renderRound();startTimer()}
+function fmt(s){return `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`}
+function startTimer(){if(state.timer)clearInterval(state.timer);state.timer=setInterval(()=>{if(state.phase!=='playing')return;state.seconds--;let t=$('timer');if(t){t.textContent=fmt(state.seconds);t.classList.toggle('warn',state.seconds<=30)}let b=$('timebar');if(b)b.style.width=(state.seconds/180*100)+'%';if(state.mode==='auto'&&state.seconds===120)autoEvent();if(state.mode==='auto'&&state.seconds===60)autoEvent();if(state.mode==='auto'&&state.seconds===30)autoEvent();if(state.seconds<=0){clearInterval(state.timer);state.timer=null;openVoting()}},1000)}
+function playerCards(){return state.alive.map(n=>`<div class="player-chip">${esc(n)} <span class="hearts">${'♥'.repeat(state.hearts[n])}${'♡'.repeat(3-state.hearts[n])}</span></div>`).join('')}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderRound(){let q=questions[state.question];$('modalTitle').textContent=`Runde ${state.round} · ${state.mode==='mod'?'Moderator-Modus':'Chaos-Modus'}`;$('body').innerHTML=`<div class="game-top"><div><div class="eyebrow">ZEIT VERBLEIBEND</div><div id="timer" class="timer">${fmt(state.seconds)}</div></div><div style="text-align:right"><div class="pill">${state.alive.length} IM SPIEL</div><div class="status" style="margin-top:8px">3 Herzen zum Start</div></div></div><div class="bar"><div id="timebar" style="width:${state.seconds/180*100}%"></div></div><div class="gamegrid"><div class="subpanel"><div class="eyebrow">AKTUELLE FRAGE</div><h3>${q.q}</h3><div class="muted">Diskutiert eure Antworten im Discord-Voicechat. Die Frage ist für alle sichtbar.</div>${state.mode==='auto'?'<div class="event"><b>⚡ Automatischer Hinweis</b><br>'+q.hint+'</div>':'<div class="event"><b>🎙️ Moderator-Aktion</b><br>Nutze die Aktionen, um Tipps zu geben oder Chaos zu stiften.</div>'}</div><div class="subpanel"><div class="eyebrow">SPIELER & HERZEN</div><div class="players">${playerCards()}</div><div class="muted">Ausgeschiedene Spieler können nicht mehr gewählt werden.</div></div></div><details class="rules-drawer" style="margin-top:14px"><summary>📜 Spielregeln anzeigen</summary><div class="rules-drawer-content"><div class="rule"><span class="heart">♥</span><div><b>3 Herzen pro Spieler</b><span class="muted">Jeder startet mit drei Herzen. Wer ein Voting verliert, verliert ein Herz; bei 0 Herzen scheidet man aus.</span></div></div><div class="rule"><span>◉</span><div><b>Geheimes Voting</b><span class="muted">Jeder lebende Spieler stimmt für eine andere Person ab. Die Stimmen werden erst bei der Auswertung gezeigt.</span></div></div><div class="rule"><span>⚖</span><div><b>Gleichstand</b><span class="muted">Bei gleicher Stimmenzahl wird in dieser Demo zufällig eine Person aus den Gleichplatzierten gewählt.</span></div></div><div class="rule"><span>◷</span><div><b>Unterschied der Modi</b><span class="muted">Moderator-Modus: Eine Spielleitung steuert Hinweise, Events, Zeit und Voting. Chaos-Modus: Hinweise und Events kommen automatisch; das Voting startet nach 3 Minuten selbstständig.</span></div></div></div></details><div id="eventFeed"></div>${state.mode==='mod'?`<div class="subpanel" style="margin-top:14px"><h3>🎛️ Moderator-Konsole</h3><div class="row"><button class="btn secondary" onclick="giveHint()">Hinweis veröffentlichen</button><button class="btn secondary" onclick="triggerEvent()">Chaos-Event</button><button class="btn ghost" onclick="addTime(30)">+30 Sekunden</button><button class="btn ghost" onclick="addTime(-30)">−30 Sekunden</button></div><div class="field"><label for="custom">Eigene Ansage / Chaos-Event</label><input id="custom" maxlength="180" placeholder="z. B. Jeder muss einen Verdächtigen nennen"><button class="btn ghost" onclick="publishCustom()">Ansage veröffentlichen</button></div><button class="btn danger" onclick="openVoting()">Runde vorzeitig beenden & voten</button></div>`:`<div class="subpanel" style="margin-top:14px"><h3>⚡ Automatische Events</h3><p style="margin-bottom:0">Hinweise erscheinen bei 2:00, 1:00 und 0:30. Die Runde endet automatisch, wenn der Timer null erreicht.</p></div>`}<div class="row" style="margin-top:15px"><button class="btn ghost" onclick="if(confirm('Runde wirklich abbrechen?'))closeModal()">Lobby schließen</button></div>`}
+function announce(msg){let f=$('eventFeed');if(f)f.innerHTML=`<div class="feedback">${msg}</div>`}
+function giveHint(){let q=questions[state.question];announce('💡 MODERATOR-HINWEIS: '+esc(q.hint))}
+function triggerEvent(){let available=events.filter((e,i)=>!state.usedEvents.includes(i));if(!available.length)state.usedEvents=[];let candidates=events.map((e,i)=>({e,i})).filter(x=>!state.usedEvents.includes(x.i));let pick=candidates[Math.floor(Math.random()*candidates.length)];state.usedEvents.push(pick.i);announce('<b>'+esc(pick.e.title)+'</b><br>'+esc(pick.e.text))}
+function publishCustom(){let v=($('custom')?.value||'').trim();if(!v)return;announce('📣 MODERATOR-ANSAGE: '+esc(v));$('custom').value=''}
+function addTime(v){state.seconds=Math.max(0,Math.min(300,state.seconds+v));let t=$('timer');if(t)t.textContent=fmt(state.seconds);let b=$('timebar');if(b)b.style.width=(state.seconds/180*100)+'%';if(state.seconds===0)openVoting()}
+function autoEvent(){state.chaosCount++;let q=questions[state.question];let msg=state.seconds===120?'⚡ CHAOS-EVENT: '+q.hint:state.seconds===60?'⚡ BLITZRUNDE: Jeder hat 10 Sekunden, um sich im Voicechat zu verteidigen!':'⚡ LETZTE CHANCE: Noch 30 Sekunden bis zum geheimen Voting!';announce(msg)}
+function openVoting(){if(state.phase!=='playing')return;if(state.timer)clearInterval(state.timer);state.timer=null;state.phase='voting';state.votes={};state.voted=new Set();state.selected=null;renderVote()}
+function renderVote(){let remaining=state.alive.filter(n=>!(state.mode==='mod'&&n===state.host&&state.players.includes(state.host)&&!state.alive.includes(state.host)));$('modalTitle').textContent='Geheimes Voting';$('body').innerHTML=`<div class="eyebrow">RUNDE ${state.round} · GEHEIME ABSTIMMUNG</div><h3>Wer soll ein Herz verlieren?</h3><p>Jeder lebende Spieler stimmt genau einmal ab. Die Stimmen bleiben bis zur Auswertung geheim. ${state.mode==='mod'?'Der Moderator ist kein Kandidat, wenn er nicht mitspielt.':''}</p><div class="field"><label>Wähle deinen Spieler-Namen</label><select id="voter" onchange="state.selected=null;document.querySelectorAll('.vote-btn').forEach(b=>b.classList.remove('selected'))">${state.alive.map(n=>`<option value="${esc(n)}">${esc(n)}</option>`).join('')}</select></div><div class="muted">Demo-Hinweis: Hier simulierst du die Stimmen aller Spieler nacheinander auf demselben Gerät.</div><div class="vote-list">${state.alive.map(n=>`<button class="vote-btn" data-target="${esc(n)}" onclick="selectVote('${jsq(n)}')">${esc(n)}<br><span class="hearts">${'♥'.repeat(state.hearts[n])}${'♡'.repeat(3-state.hearts[n])}</span></button>`).join('')}</div><div id="voteStatus" class="feedback">Wähle einen Kandidaten, dann bestätige deine Stimme.</div><div class="row"><button class="btn" id="cast" onclick="castVote()">Stimme geheim abgeben</button><button class="btn secondary" onclick="finishVoting()">Demo-Voting auswerten</button></div><p class="muted">Bei echtem Online-Betrieb wird die Stimme jedes Spielers von dessen eigenem Gerät gesendet. Dieser Prototyp speichert Stimmen nur im Arbeitsspeicher dieser Demo.</p>`}
+function jsq(s){return String(s).replace(/\\/g,'\\\\').replace(/'/g,"\\'")}
+function selectVote(n){if(state.phase!=='voting')return;state.selected=n;document.querySelectorAll('.vote-btn').forEach(b=>b.classList.toggle('selected',b.dataset.target===n));$('voteStatus').textContent='Ausgewählt: '+n+'. Stimme bleibt bis zur Auswertung geheim.'}
+function castVote(){if(!state.selected){$('voteStatus').textContent='Wähle zuerst einen Kandidaten.';return}let voter=$('voter').value;if(state.voted.has(voter)){$('voteStatus').textContent=voter+' hat bereits abgestimmt.';return}if(voter===state.selected){$('voteStatus').textContent='Du kannst nicht für dich selbst stimmen.';return}state.votes[state.selected]=(state.votes[state.selected]||0)+1;state.voted.add(voter);let remaining=state.alive.filter(n=>!state.voted.has(n)&&!(state.mode==='mod'&&n===state.host&& !state.players.includes(state.host)));$('voteStatus').textContent='Stimme verschlüsselt in dieser Demo erfasst. '+state.voted.size+' von '+state.alive.length+' Spielern haben abgestimmt.';if(state.voted.size>=state.alive.length-1){$('cast').disabled=true;$('voteStatus').textContent+=' Du kannst jetzt auswerten.'}state.selected=null;document.querySelectorAll('.vote-btn').forEach(b=>b.classList.remove('selected'))}
+function finishVoting(){if(state.phase!=='voting')return;let entries=state.alive.map(n=>[n,state.votes[n]||0]);let max=Math.max(0,...entries.map(x=>x[1]));let tied=entries.filter(x=>x[1]===max).map(x=>x[0]);if(max===0){announceResult(null,'Niemand hat Stimmen erhalten. In dieser Demo verliert niemand ein Herz.');return}let victim=tied[Math.floor(Math.random()*tied.length)];state.hearts[victim]=Math.max(0,state.hearts[victim]-1);if(state.hearts[victim]===0)state.alive=state.alive.filter(n=>n!==victim);let counts=entries.map(([n,c])=>`${esc(n)}: ${c}`).join(' · ');let tieNote=tied.length>1?' Gleichstand! Zufällig wurde aus den Gleichplatzierten gewählt.':'';announceResult(victim,`Stimmen: ${counts}.${tieNote} ${esc(victim)} verliert ein Herz.`)}
+function announceResult(victim,description){state.phase='result';let eliminated=victim&&state.hearts[victim]===0;let gameover=state.alive.length<=1;$('modalTitle').textContent=gameover?'Spiel beendet':'Voting ausgewertet';$('body').innerHTML=`<div class="eyebrow">ERGEBNIS · RUNDE ${state.round}</div><div class="feedback" style="margin-top:18px">${description}</div>${victim?`<div class="subpanel"><h3>${eliminated?'☠️ Ausgeschieden':'💔 Herz verloren'}</h3><div style="font-size:24px;font-weight:900">${esc(victim)}</div><div class="hearts">${'♥'.repeat(state.hearts[victim])}${'♡'.repeat(3-state.hearts[victim])}</div>${eliminated?'<p>Keine Herzen mehr übrig – du bist raus!</p>':''}</div>`:''}<h3 style="margin-top:20px">${gameover?'🏆 Gewinner': 'Spielerstatus'}</h3><div class="players">${state.alive.map(n=>`<div class="player-chip">${esc(n)} <span class="hearts">${'♥'.repeat(state.hearts[n])}${'♡'.repeat(3-state.hearts[n])}</span></div>`).join('')||'Keine Spieler mehr übrig.'}</div><div class="row" style="margin-top:18px">${gameover?`<button class="btn" onclick="openSetup('${state.mode}')">Neue Lobby starten</button>`:`<button class="btn" onclick="nextRound()">Nächste Runde →</button>`}<button class="btn ghost" onclick="closeModal()">Schließen</button></div>`}
+function nextRound(){if(state.alive.length<=1)return;state.round++;state.question=(state.question+1+Math.floor(Math.random()*(questions.length-1)))%questions.length;state.seconds=180;state.phase='playing';state.votes={};state.voted=new Set();state.selected=null;renderRound();startTimer()}
+</script></body></html>
