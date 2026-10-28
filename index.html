@@ -241,7 +241,10 @@ async function createOnlineRoom(){
    let room=null, lastError=null;
    for(let attempt=0;attempt<5;attempt++){
      const code=hydraRoomCode();
-     const result=await client.from('rooms').insert({code,game,host_id:user.id,status:'waiting'}).select('id,code,game,host_id,status').single();
+     const result = await client.from('rooms')
+  .insert({code, game, host_id: user.id, status: 'waiting'})
+  .select('id, code, game, host_id, status')
+  .maybeSingle();
      if(!result.error){room=result.data;break;}
      lastError=result.error;
      if(!String(result.error.message||'').toLowerCase().includes('duplicate')) throw result.error;
