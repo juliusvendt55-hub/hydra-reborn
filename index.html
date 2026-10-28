@@ -4,30 +4,151 @@
 :root{--bg:#07050d;--panel:#12101d;--panel2:#1b1629;--line:#3a2b55;--purple:#bd8cff;--green:#c0ff72;--muted:#aaa4bf;--white:#faf7ff;--red:#ff6d9a;--gold:#ffd779}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% -8%,#542c86 0,transparent 36%),radial-gradient(ellipse at 0% 42%,#24113e 0,transparent 34%),radial-gradient(ellipse at 50% 110%,#180e2a 0,transparent 42%),var(--bg);color:var(--white);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--green);outline-offset:3px}.wrap{max-width:1080px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:8px 0 24px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.1em}.mark{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#eadbff,#9b5cff 58%,#6529bd);display:grid;place-items:center;color:#100b1d;font-size:23px;box-shadow:0 0 24px #a56aff55, inset 0 1px 0 #fff8}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.23em}.pill{border:1px solid #394a36;background:#112018;color:var(--green);padding:6px 11px;border-radius:99px;font-size:11px;font-weight:800}.hero{padding:32px 0 28px;display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center}.eyebrow{color:var(--green);text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:900}.hero h1{font-size:clamp(39px,7vw,70px);line-height:.98;letter-spacing:-.06em;margin:13px 0}.hero h1 span{color:var(--purple)}p{color:var(--muted)}.hero p{max-width:580px;font-size:16px}.art{min-height:215px;border:1px solid #403358;border-radius:25px;background:linear-gradient(145deg,#211a34,#10151a 72%);display:grid;place-items:center;position:relative;overflow:hidden}.orb{width:145px;height:145px;border-radius:50%;border:2px solid #a78bfa88;box-shadow:0 0 55px #9c7bff30,inset 0 0 35px #9c7bff20;display:grid;place-items:center;font-size:70px}.art:after{content:"PRIVATE GAME NETWORK";position:absolute;bottom:16px;letter-spacing:.22em;font-size:9px;color:#aaa0c8}.layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{background:linear-gradient(145deg,#191326ee,#0e0b16f5);border:1px solid #493366;border-radius:18px;padding:21px;box-shadow:0 12px 34px #0004,inset 0 1px 0 #ffffff08;transition:transform .2s,border-color .2s,box-shadow .2s}.panel:hover{border-color:#8b5bd0;box-shadow:0 14px 40px #6b2bb51c,inset 0 1px 0 #ffffff0c}.panel h2{margin:0;font-size:21px;letter-spacing:-.03em}.panel h3{margin:8px 0}.panel p{margin:7px 0 17px;font-size:13px}.icon{width:48px;height:48px;border-radius:14px;background:#29203e;border:1px solid #4b3c6e;display:grid;place-items:center;font-size:25px;margin-bottom:16px}.panel:nth-child(2) .icon{background:#162c20;border-color:#2e593b}.btn{padding:11px 15px;border-radius:11px;font-weight:850;background:linear-gradient(135deg,#d4ff91,#a7f45b);color:#15120c;border:1px solid #e4ffc0;box-shadow:0 4px 18px #a9ff5930;transition:transform .15s,filter .15s,box-shadow .15s}.btn:hover{transform:translateY(-1px);box-shadow:0 7px 22px #a9ff5940}.btn:hover{filter:brightness(1.07)}.btn.secondary{background:linear-gradient(135deg,#382354,#21152f);color:#f0e5ff;border:1px solid #7953a7;box-shadow:0 4px 18px #8b4de51c}.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--muted)}.btn.danger{background:#351822;color:#ff9aac;border:1px solid #703143}.btn:disabled{opacity:.4;cursor:not-allowed}.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center}.field{display:flex;flex-direction:column;gap:6px;margin:12px 0}.field label{font-size:12px;color:#c5c9d8;font-weight:700}.field input,.field select,.input{width:100%;background:#090b12;color:white;border:1px solid #343849;border-radius:10px;padding:11px}.players{display:flex;flex-wrap:wrap;gap:8px;margin:13px 0}.player-chip{background:#202333;border:1px solid #35394e;border-radius:10px;padding:8px 10px;font-size:13px}.muted{color:var(--muted);font-size:12px}.rule{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}.rule:last-child{border:0}.rule b{display:block}.heart{color:var(--red);letter-spacing:2px}.hide{display:none!important}.overlay{position:fixed;inset:0;z-index:10;background:#05020ced;backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:16px}.overlay.show{display:flex}.modal{width:min(800px,100%);max-height:94vh;overflow:auto;background:linear-gradient(145deg,#191126,#0d0a14 75%);border:1px solid #6a438f;border-radius:22px;padding:22px;box-shadow:0 30px 100px #000b,0 0 55px #8b43d51a,inset 0 1px 0 #ffffff0b}.modal-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.modal-head h2{margin:3px 0;font-size:24px}.close{background:#242634;color:#ddd;border-radius:10px;width:37px;height:37px}.timer{font-size:clamp(37px,8vw,58px);font-weight:950;letter-spacing:-.06em;font-variant-numeric:tabular-nums}.timer.warn{color:var(--red)}.game-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:16px 0}.bar{height:6px;background:#282b39;border-radius:99px;overflow:hidden}.bar div{height:100%;background:linear-gradient(90deg,var(--purple),var(--green));width:100%;transition:width .5s linear}.gamegrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:15px}.subpanel{background:linear-gradient(145deg,#211832,#15111f);border:1px solid #3f2d5c;border-radius:14px;padding:15px;box-shadow:inset 0 1px 0 #ffffff07}.subpanel h3{margin:0 0 8px}.event{border:1px solid #68532b;background:#2b2415;color:var(--gold);border-radius:12px;padding:12px;margin:12px 0}.vote-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}.vote-btn{background:#1c1f2e;color:white;border:1px solid #363a50;border-radius:11px;padding:12px;text-align:left}.vote-btn.selected{border-color:var(--purple);background:#2a2141}.vote-btn:disabled{opacity:.45}.hearts{color:var(--red);font-weight:900;letter-spacing:3px}.feedback{padding:12px;border-radius:11px;background:#211832;border:1px solid #3d2b58;color:#e9def8;margin:12px 0}.rules-drawer{border:1px solid #5a3a7d;background:#171020;border-radius:13px;overflow:hidden}.rules-drawer summary{cursor:pointer;padding:13px 15px;font-weight:850;color:#e3cfff;list-style:none}.rules-drawer summary::-webkit-details-marker{display:none}.rules-drawer summary:after{content:'＋';float:right;color:var(--purple)}.rules-drawer[open] summary:after{content:'−'}.rules-drawer-content{padding:0 15px 10px;border-top:1px solid #38264d}.rules-drawer .rule{border-color:#332440}.status{font-size:12px;color:var(--muted)}.foot{text-align:center;padding:30px 0 14px;color:#777d91;font-size:11px}
 @media(max-width:700px){.wrap{padding:15px}.hero{grid-template-columns:1fr;padding:22px 0}.art{min-height:150px}.orb{width:100px;height:100px;font-size:48px}.layout,.gamegrid{grid-template-columns:1fr}.vote-list{grid-template-columns:1fr}.top{align-items:flex-start}}
+
+/* HYDRA REBORN — premium dark redesign */
+:root{
+ --bg:#08080d;--panel:#101017;--panel2:#15151f;--line:#292735;
+ --purple:#a78bfa;--green:#c4ff68;--muted:#a4a2b4;--white:#f5f4fa;
+ --red:#ff718d;--gold:#f0c96a;
+}
+body{
+ background:
+  radial-gradient(ellipse at 82% 0%,rgba(105,62,180,.14),transparent 31%),
+  radial-gradient(ellipse at 4% 44%,rgba(72,44,126,.10),transparent 32%),
+  var(--bg);
+ letter-spacing:.005em;
+}
+.wrap{max-width:1120px;padding:24px}
+.top{padding:8px 0 18px;border-bottom:1px solid rgba(167,139,250,.15)}
+.brand{letter-spacing:.14em;font-size:13px}
+.mark{
+ width:38px;height:38px;border-radius:10px;
+ background:linear-gradient(145deg,#282238,#15121e);
+ color:#c7b6ff;font-size:19px;
+ border:1px solid #403652;box-shadow:none
+}
+.brand small{letter-spacing:.2em;font-weight:600}
+.pill{border:1px solid #393347;background:#17151f;color:#bba9ff;border-radius:6px;letter-spacing:.1em}
+.hero{padding:42px 0 34px;gap:32px}
+.hero h1{font-size:clamp(38px,6vw,64px);letter-spacing:-.055em}
+.hero h1 span{color:#b9a1ff}
+.eyebrow{color:#b7a1ff;letter-spacing:.19em;font-size:10px}
+.art{
+ min-height:220px;border-radius:14px;border:1px solid #302b3d;
+ background:linear-gradient(145deg,#14131c,#0b0b11);
+}
+.orb{
+ width:126px;height:126px;border-radius:28px;transform:rotate(45deg);
+ border:1px solid #594b79;box-shadow:inset 0 0 28px rgba(167,139,250,.10);
+ font-size:0;position:relative;background:linear-gradient(145deg,#211a30,#0c0b12)
+}
+.orb:after{
+ content:"H";transform:rotate(-45deg);font-size:54px;font-weight:850;
+ letter-spacing:-.08em;color:#c6b4ff
+}
+.art:after{color:#777286;letter-spacing:.24em;font-size:8px}
+.panel{
+ background:linear-gradient(145deg,rgba(18,17,26,.98),rgba(13,13,19,.98));
+ border:1px solid #2d2938;border-radius:13px;padding:22px;
+ box-shadow:0 10px 28px rgba(0,0,0,.16),inset 0 1px 0 rgba(255,255,255,.025);
+ transition:border-color .18s,background .18s
+}
+.panel:hover{border-color:#514367;box-shadow:0 10px 28px rgba(0,0,0,.20)}
+.panel h2{font-size:20px;letter-spacing:-.025em}
+.panel h3{letter-spacing:-.015em}
+.icon{
+ width:40px;height:40px;border-radius:10px;background:#1b1825;
+ border:1px solid #373044;font-size:20px;margin-bottom:14px
+}
+.panel:nth-child(2) .icon{background:#1b1825;border-color:#373044}
+.btn{
+ padding:10px 14px;border-radius:8px;font-weight:750;
+ background:#b9a1ff;color:#100d18;border:1px solid #c8b8ff;
+ box-shadow:none;transition:background .15s,border-color .15s,transform .15s
+}
+.btn:hover{transform:translateY(-1px);box-shadow:none;filter:brightness(1.06)}
+.btn.secondary{
+ background:#211b2d;color:#e6dcff;border:1px solid #57466e;box-shadow:none
+}
+.btn.ghost{background:transparent;border:1px solid #393446;color:#c2bdce}
+.btn.danger{background:#29151d;color:#ff9aac;border:1px solid #59303b}
+.field{gap:7px;margin:13px 0}
+.field label{font-size:11px;color:#b5b1c4;font-weight:700;letter-spacing:.02em}
+.field input,.field select,.input{
+ background:#09090f;border:1px solid #34313f;border-radius:8px;padding:12px;
+ transition:border-color .15s,box-shadow .15s
+}
+.field input:focus,.field select:focus,.input:focus{border-color:#9f85e8;box-shadow:0 0 0 3px rgba(167,139,250,.10);outline:0}
+.players{gap:7px}
+.player-chip{background:#191821;border:1px solid #34313e;border-radius:7px;padding:7px 10px}
+.modal{
+ background:linear-gradient(145deg,#111019,#0b0b11 78%);
+ border:1px solid #514264;border-radius:15px;padding:24px;
+ box-shadow:0 28px 90px rgba(0,0,0,.65),0 0 45px rgba(117,79,172,.07)
+}
+.overlay{background:rgba(3,3,7,.88);backdrop-filter:blur(10px)}
+.close{background:#17161f;color:#c9c5d4;border:1px solid #403b4c;border-radius:8px}
+.subpanel{
+ background:linear-gradient(145deg,#17151f,#111118);
+ border:1px solid #302b3b;border-radius:11px;padding:16px;box-shadow:none
+}
+.event{border:1px solid #5b4a29;background:#211d15;color:#e8cb78;border-radius:8px}
+.feedback{background:#191622;border:1px solid #393044;color:#ddd5ef;border-radius:8px}
+.rules-drawer{border:1px solid #393044;background:#111017;border-radius:9px}
+.rules-drawer summary{color:#d7c8ff}
+.rules-drawer-content{border-color:#30283c}
+.rule{border-color:#2a2733}
+.bar{background:#282532}
+.bar div{background:linear-gradient(90deg,#8e73d5,#c3b0ff)}
+.vote-btn{background:#171720;border:1px solid #363342;border-radius:8px}
+.vote-btn.selected{border-color:#a78bfa;background:#211b30}
+.gamegrid{gap:12px}
+.foot{color:#777386;letter-spacing:.08em}
+#body>p{font-size:13px;max-width:720px}
+@media(max-width:700px){
+ .wrap{padding:15px}
+ .hero{padding:26px 0 22px;gap:18px}
+ .art{min-height:145px}
+ .orb{width:84px;height:84px;border-radius:20px}
+ .orb:after{font-size:38px}
+ .panel{padding:17px}
+ .modal{padding:17px}
+}
+
 </style></head><body><main class="wrap">
 <header class="top"><div class="brand"><div class="mark">Ψ</div><div>HYDRA REBORN<small>PRIVATE GAME NETWORK</small></div></div><div class="pill">● GAME LAB · V1</div></header>
-<section class="hero"><div><div class="eyebrow">▰ Dein Server. Eure Regeln.</div><h1>HYDRA<br><span>GAME NIGHT.</span></h1><p>Private Party-Games für euren Discord-Server. Wählt ein Spiel und startet eure nächste Runde mit Freunden.</p></div><div class="art"><div class="orb">🐍</div></div></section>
+<section class="hero"><div><div class="eyebrow">▰ Dein Server. Eure Regeln.</div><h1>HYDRA<br><span>GAME NIGHT.</span></h1><p>Private Party-Games für euren Discord-Server. Spielt allein zum Üben oder erstellt eine Online-Lobby, in der der Host den Start auslöst.</p></div><div class="art"><div class="orb">🐍</div></div></section>
 <section class="panel" style="margin-bottom:16px;border-color:#7950a6;background:linear-gradient(120deg,#201332,#100c18)">
 <div class="row" style="justify-content:space-between;align-items:center">
   <div style="flex:1;min-width:220px"><div class="eyebrow">NÄCHSTER SCHRITT · ONLINE-LOBBY</div><h2 style="margin-top:5px">Mit Freunden spielen</h2><p style="margin:7px 0 0">Gastnamen eingeben, Raum erstellen oder mit einem Raumcode beitreten – die Oberfläche ist vorbereitet.</p></div>
   <button class="btn" onclick="openOnlineLobby()">Online-Lobby öffnen →</button>
 </div>
-<div class="muted" style="margin-top:10px">Vorschau: Raumcodes sind hier noch nicht zwischen Geräten synchronisiert. Der echte Online-Server kommt im nächsten Schritt.</div>
+<div class="muted" style="margin-top:10px">Einzelspieler = lokale Runde auf diesem Gerät. Mehrspieler = gemeinsame Lobby mit Raumcode; der Host startet den Raum.</div>
 </section>
 <div class="layout">
+<section class="subpanel" style="margin:18px 0">
+  <div class="eyebrow">SPIELMODI</div>
+  <h2 style="margin:6px 0">Allein üben oder gemeinsam spielen</h2>
+  <div class="gamegrid">
+    <div class="subpanel"><h3>Einzelspieler</h3><p>Starte eine lokale Demo direkt auf diesem Gerät. Gut zum Testen der Regeln und des Ablaufs.</p><button class="btn secondary" onclick="openGameSelect('dumm')">Einzelspieler öffnen →</button></div>
+    <div class="subpanel"><h3>Mehrspieler</h3><p>Erstelle eine Lobby, teile den Raumcode und lass den Host die Runde starten.</p><button class="btn" onclick="openOnlineLobby()">Mehrspieler-Lobby öffnen →</button></div>
+  </div>
+</section>
 <section class="panel"><div class="icon">🎙️</div><div class="eyebrow">PARTY-GAME 01</div><h2>Der Dümmste fliegt</h2><p>Diskutieren, Hinweise sammeln und geheim abstimmen. Spielt mit echter Spielleitung oder lasst den Chaos-Modus übernehmen.</p><button class="btn" onclick="openGameSelect('dumm')">Spiel auswählen →</button></section>
 <section class="panel"><div class="icon">📏</div><div class="eyebrow">PARTY-GAME 02</div><h2>Schätz-Duell</h2><p>Schätzfragen mit Zahlen-Balken oder Zeitlinien. Wer näher an der richtigen Antwort liegt, bekommt mehr Punkte.</p><button class="btn secondary" onclick="openGameSelect('estimate')">Schätz-Duell öffnen →</button></section>
+<section class="panel"><div class="icon">💰</div><div class="eyebrow">PARTY-GAME 03</div><h2>Wer wird Millionär?</h2><p>Ein Moderator, ein Kandidat und 15 Fragen bis zur Million. Bei einer falschen Antwort ist das Spiel sofort vorbei.</p><button class="btn" onclick="openGameSelect('millionaire')">Auf den Stuhl →</button></section>
 </div>
 <section class="panel" style="margin-top:16px">
 <h2>Die Spiele im Überblick</h2>
 <div class="gamegrid">
 <div class="subpanel"><h3>🎙️ Der Dümmste fliegt</h3><p>Wählt nach dem Öffnen zwischen zwei Spielvarianten:</p><ul><li><b>Moderator-Modus:</b> Eine Person steuert Hinweise, Events und Timer.</li><li><b>Chaos-Modus:</b> Die Website lässt Hinweise, Events und Voting automatisch ablaufen.</li></ul><p>Alle starten mit 3 Herzen. Wer im geheimen Voting die meisten Stimmen bekommt, verliert ein Herz. Bei 0 Herzen scheidet man aus.</p></div>
 <div class="subpanel"><h3>📏 Schätz-Duell</h3><p>Alle beantworten dieselbe Schätzfrage über einen Zahlen-Balken oder eine Zeitlinie. Nach dem Auflösen werden Punkte nach Nähe zur richtigen Antwort vergeben.</p><ul><li>Je näher die Schätzung, desto mehr Punkte.</li><li>Exakte Treffer bringen die Höchstpunktzahl.</li><li>Die Rangliste zeigt, wer insgesamt vorne liegt.</li></ul><div class="muted">Im Prototyp ist das Schätz-Duell eine lokale Demo auf einem Gerät, noch kein synchronisiertes Online-Spiel.</div></div>
+<div class="subpanel"><h3>💰 Wer wird Millionär?</h3><p>Ein Moderator leitet die Show, ein Kandidat beantwortet 15 Multiple-Choice-Fragen. Der Geldpegel steigt von 50 € bis 1.000.000 €.</p><ul><li>Bei einer falschen Antwort ist das Spiel sofort vorbei.</li><li>Der 50:50-Joker entfernt zwei falsche Antworten.</li><li>Der Publikumsjoker ist optional und kann auch ohne Zuschauer übersprungen werden.</li></ul><div class="muted">Die Spielshow ist zunächst eine lokale Demo auf einem Gerät; die Live-Synchronisierung zwischen Geräten folgt separat.</div></div>
 </div>
-<div class="event" style="margin-top:14px"><b>Hinweis zum Prototyp:</b> Die Website ist noch nicht online und hat noch keinen gemeinsamen Multiplayer-Server. Abstimmungen und Schätzungen werden lokal in diesem Browser simuliert.</div>
+<div class="event" style="margin-top:14px"><b>Hinweis:</b> Online-Lobby und Raumcodes sind verbunden. Die vollständige Synchronisierung der eigentlichen Spielrunden (Fragen, Timer, Votes und Punkte) wird als nächster Schritt ergänzt.</div>
 </section>
 <section class="panel" style="margin-top:16px"><h2>Spielregeln</h2><div class="rule"><span>♥</span><div><b>3 Herzen pro Spieler</b><span class="muted">Bei jedem verlorenen Voting ein Herz weniger. Bei 0 Herzen ausgeschieden.</span></div></div><div class="rule"><span>◷</span><div><b>3 Minuten pro Runde</b><span class="muted">Diskutieren, Hinweise sammeln und andere überzeugen.</span></div></div><div class="rule"><span>◉</span><div><b>Geheime Abstimmung</b><span class="muted">Stimmen bleiben bis zur Auswertung verborgen. Höchste Stimmenzahl verliert ein Herz.</span></div></div><div class="rule"><span>⚖</span><div><b>Gleichstand</b><span class="muted">Stichwahl zwischen den Betroffenen. Bei erneutem Gleichstand entscheidet eine zufällige Auswahl aus den Gleichplatzierten.</span></div></div></section>
-<div class="foot">HYDRA REBORN · BROWSER-PROTOTYP · Multiplayer/Server-Speicherung noch nicht verbunden</div>
+<div class="foot">HYDRA REBORN · ONLINE-LOBBY · Spielrunden-Synchronisierung in Arbeit</div>
 </main>
 <div class="overlay" id="overlay"><div class="modal"><div class="modal-head"><div><div class="eyebrow" id="modeLabel">LOBBY SETUP</div><h2 id="modalTitle">Lobby erstellen</h2></div><button class="close" onclick="closeModal()" aria-label="Schließen">✕</button></div><div id="body"></div></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -90,11 +211,11 @@ function openOnlineLobby(){
  $('overlay').classList.add('show');
  $('modeLabel').textContent='ONLINE · LOBBY';
  $('modalTitle').textContent='Raum erstellen oder beitreten';
- $('body').innerHTML=`<p>Spielt ohne Account: Gastnamen reichen. Erstelle einen Raum und teile den sechsstelligen Code im Discord.</p>
+ $('body').innerHTML=`<p>Mehrspieler-Lobby: Gastnamen reichen. Erstelle einen Raum, teile den sechsstelligen Code im Discord und starte die Runde, sobald alle da sind.</p>
  <div class="gamegrid">
   <div class="subpanel"><div class="icon">✦</div><h3>Neuen Raum erstellen</h3>
    <div class="field"><label for="hostGuestName">Dein Gastname</label><input id="hostGuestName" maxlength="20" placeholder="z. B. HydraBoss" autocomplete="nickname"></div>
-   <div class="field"><label for="hostGame">Spiel auswählen</label><select id="hostGame"><option value="dumm">Der Dümmste fliegt</option><option value="estimate">Schätz-Duell</option></select></div>
+   <div class="field"><label for="hostGame">Spiel auswählen</label><select id="hostGame"><option value="dumm">Der Dümmste fliegt</option><option value="estimate">Schätz-Duell</option><option value="millionaire">Wer wird Millionär?</option></select></div>
    <button class="btn" onclick="createOnlineRoom()">Raum erstellen →</button>
   </div>
   <div class="subpanel"><div class="icon">⌁</div><h3>Raumcode eingeben</h3>
@@ -103,7 +224,7 @@ function openOnlineLobby(){
    <button class="btn secondary" onclick="joinOnlineRoom()">Raum beitreten →</button>
   </div>
  </div><div id="onlineLobbyResult"></div>
- <p class="muted">Online-Verbindung wird verwendet, sobald die lokale Supabase-Konfiguration eingetragen ist.</p>`;
+ <p class="muted">Einzelspieler: über die Spielkarten starten. Mehrspieler: Raumcode teilen; nur der Host kann das Spiel starten.</p>`;
 }
 function showOnlineError(err){
  const out = $('onlineLobbyResult');
@@ -165,7 +286,27 @@ async function renderOnlineRoom(room,name,isHost){
    if(error) throw error;
    playerList=data||[];
  }catch(err){showOnlineError(err);return}
- out.innerHTML=`<div class="subpanel" style="margin-top:14px;border-color:#8e5ac3"><div class="eyebrow">${isHost?'RAUM ERSTELLT':'DEM RAUM BEIGETRETEN'}</div><h3>Raumcode: <span style="color:var(--green);letter-spacing:.12em">${escapeHtml(room.code)}</span></h3><p>Teile diesen Code im Discord. Freunde können ihn auf ihren eigenen Geräten eingeben.</p><div class="row"><button class="btn secondary" onclick="copyRoomCode('${escapeHtml(room.code)}')">Raumcode kopieren</button><span class="muted">${room.game==='estimate'?'Schätz-Duell':'Der Dümmste fliegt'}</span></div><h3 style="margin-top:16px">Spieler (<span id="onlinePlayerCount">${playerList.length}</span>)</h3><div class="players" id="onlinePlayerList">${playerList.map(p=>`<span class="player-chip">◉ ${escapeHtml(p.nickname)}${p.is_host?' · Host':''}</span>`).join('')}</div><div class="event"><b>Lobby ist online.</b> Spielerlisten werden über Supabase aktualisiert. Der Spielablauf selbst muss noch als nächster Schritt mit dem Server synchronisiert werden.</div></div>`;
+ const gameName=room.game==='estimate'?'Schätz-Duell':room.game==='millionaire'?'Wer wird Millionär?':'Der Dümmste fliegt';
+ const started=room.status==='playing';
+ out.innerHTML=`<div class="subpanel" style="margin-top:14px;border-color:#8e5ac3"><div class="eyebrow">${started?'SPIEL GESTARTET':(isHost?'RAUM ERSTELLT':'DEM RAUM BEIGETRETEN')}</div><h3>Raumcode: <span style="color:var(--green);letter-spacing:.12em">${escapeHtml(room.code)}</span></h3><p>Teile diesen Code im Discord. Freunde können ihn auf ihren eigenen Geräten eingeben.</p><div class="row"><button class="btn secondary" onclick="copyRoomCode('${escapeHtml(room.code)}')">Raumcode kopieren</button><span class="muted">${gameName}</span><span class="pill">${started?'LÄUFT':'WARTET AUF START'}</span></div><h3 style="margin-top:16px">Spieler (<span id="onlinePlayerCount">${playerList.length}</span>)</h3><div class="players" id="onlinePlayerList">${playerList.map(p=>`<span class="player-chip">◉ ${escapeHtml(p.nickname)}${p.is_host?' · Host':''}</span>`).join('')}</div>${started?`<div class="feedback"><b>✓ Der Host hat die Lobby gestartet.</b><br>Der Raumstatus ist jetzt „Läuft“. Die eigentliche Spielrunde (Timer, Fragen, Votes und Punkte) wird noch nicht live zwischen Geräten synchronisiert.</div><button class="btn secondary" style="margin-top:8px" onclick="openGameSelect('${room.game==='estimate'?'estimate':room.game==='millionaire'?'millionaire':'dumm'}')">Spielansicht auf diesem Gerät öffnen →</button>`:`<div class="event"><b>Lobby ist bereit.</b><br>${isHost?'Du bist der Host. Starte die Runde, wenn alle Spieler bereit sind.':'Warte, bis der Host die Runde startet.'}</div>${isHost?`<button class="btn" style="margin-top:8px" onclick="startOnlineGame()">🎮 Runde starten →</button>`:''}`}</div>`;
+}
+async function startOnlineGame(){
+ if(!hydraCurrentRoom)return;
+ const startBtn = document.querySelector('#onlineLobbyResult button[onclick="startOnlineGame()"]');
+ if(startBtn){startBtn.disabled=true;startBtn.textContent='Starte Runde…'}
+ try{
+   const {client,user}=await ensureHydraGuest();
+   if(user.id!==hydraCurrentRoom.host_id){throw new Error('Nur der Host, der die Lobby erstellt hat, kann das Spiel starten.');}
+   const {data,error}=await client.from('rooms').update({status:'playing'}).eq('id',hydraCurrentRoom.id).eq('host_id',user.id).eq('status','waiting').select('id,code,game,host_id,status').single();
+   if(error) throw error;
+   if(!data) throw new Error('Der Raum wurde bereits gestartet oder du bist nicht der Host.');
+   hydraCurrentRoom=data;
+   await renderOnlineRoom(data,'',true);
+ }catch(err){showOnlineError(err);}
+ finally {
+   const btn = document.querySelector('#onlineLobbyResult button[onclick="startOnlineGame()"]');
+   if(btn){btn.disabled=false;btn.textContent='🎮 Runde starten →'}
+ }
 }
 function subscribeToRoom(roomId){
  if(hydraRoomChannel && hydraSupabase) hydraSupabase.removeChannel(hydraRoomChannel);
@@ -174,7 +315,16 @@ function subscribeToRoom(roomId){
  hydraRoomChannel=client.channel('hydra-room-'+roomId)
   .on('postgres_changes',{event:'*',schema:'public',table:'room_players',filter:'room_id=eq.'+roomId},async()=>{
     if(hydraCurrentRoom){
-      const host = hydraCurrentRoom.host_id === (await client.auth.getUser()).data.user?.id;
+      const auth=await client.auth.getUser();
+      const host = hydraCurrentRoom.host_id === auth.data.user?.id;
+      renderOnlineRoom(hydraCurrentRoom,'',host);
+    }
+  })
+  .on('postgres_changes',{event:'UPDATE',schema:'public',table:'rooms',filter:'id=eq.'+roomId},async(payload)=>{
+    if(hydraCurrentRoom && payload.new){
+      hydraCurrentRoom={...hydraCurrentRoom,...payload.new};
+      const auth=await client.auth.getUser();
+      const host=hydraCurrentRoom.host_id===auth.data.user?.id;
       renderOnlineRoom(hydraCurrentRoom,'',host);
     }
   }).subscribe();
@@ -185,9 +335,49 @@ function copyRoomCode(code){
  else alert('Raumcode: '+code);
 }
 
+const millionaireQuestions=[
+{q:'Wie viele Bundesländer hat Deutschland?',a:['14','15','16','17'],c:2},
+{q:'Welcher Planet ist der Sonne am nächsten?',a:['Venus','Merkur','Mars','Jupiter'],c:1},
+{q:'Wie heißt die Hauptstadt von Kanada?',a:['Toronto','Vancouver','Ottawa','Montreal'],c:2},
+{q:'Welches chemische Symbol hat Gold?',a:['Ag','Gd','Go','Au'],c:3},
+{q:'Wer schrieb „Faust“?',a:['Friedrich Schiller','Johann Wolfgang von Goethe','Thomas Mann','Bertolt Brecht'],c:1},
+{q:'Wie viele Seiten hat ein Dodekaeder?',a:['8','10','12','20'],c:2},
+{q:'In welchem Jahr fiel die Berliner Mauer?',a:['1987','1988','1989','1990'],c:2},
+{q:'Welcher Ozean ist der größte?',a:['Atlantik','Indischer Ozean','Arktischer Ozean','Pazifik'],c:3},
+{q:'Welche Einheit misst elektrische Leistung?',a:['Volt','Watt','Ohm','Ampere'],c:1},
+{q:'Welches dieser Werke stammt von Jane Austen?',a:['Stolz und Vorurteil','Jane Eyre','Wuthering Heights','Middlemarch'],c:0},
+{q:'Wie nennt man die Lehre von den Pilzen?',a:['Botanik','Mykologie','Ökologie','Geologie'],c:1},
+{q:'Welcher Maler schuf „Die Sternennacht“?',a:['Claude Monet','Vincent van Gogh','Paul Cézanne','Salvador Dalí'],c:1},
+{q:'Welche Zahl ist eine Primzahl?',a:['91','93','97','99'],c:2},
+{q:'Welches Land gewann die erste Fußball-Weltmeisterschaft 1930?',a:['Brasilien','Italien','Argentinien','Uruguay'],c:3},
+{q:'Welcher Begriff bezeichnet die Grenze, ab der ein schwarzes Loch nichts mehr entkommen lässt?',a:['Photonenring','Ereignishorizont','Singularitätsrand','Rotverschiebungszone'],c:1}
+];
+const millionaireLadder=[50,100,200,300,500,1000,2000,4000,8000,16000,32000,64000,125000,500000,1000000];
+let millionaireState={moderator:'',candidate:'',index:0,used5050:false,usedAudience:false,hidden:[],ended:false};
+function openMillionaireSetup(){
+ $('modeLabel').textContent='PARTY-GAME 03 · QUIZSHOW';$('modalTitle').textContent='Wer wird Millionär?';
+ $('body').innerHTML=`<p>Die Show braucht einen Moderator und einen Kandidaten. Zuschauer sind optional. Bei einer falschen Antwort ist das Spiel sofort vorbei.</p><div class="field"><label for="millionaireModerator">Name des Moderators</label><input class="input" id="millionaireModerator" maxlength="24" placeholder="z. B. Alex"></div><div class="field"><label for="millionaireCandidate">Name des Kandidaten</label><input class="input" id="millionaireCandidate" maxlength="24" placeholder="z. B. Sam"></div><div class="subpanel"><h3>Spielregeln</h3><p>15 Fragen, vier Antworten und ein Geldpegel von 50 € bis 1.000.000 €. Ein Fehler beendet das Spiel. Der 50:50-Joker steht einmal zur Verfügung; der Publikumsjoker ist optional.</p></div><div class="row"><button class="btn" onclick="startMillionaire()">Show starten →</button><button class="btn ghost" onclick="closeModal()">Abbrechen</button></div><p class="muted">Demo: Moderator und Kandidat spielen zunächst auf demselben Gerät. Die Geräte-Synchronisierung ist noch nicht umgesetzt.</p>`;
+}
+function startMillionaire(){
+ const moderator=($('millionaireModerator')?.value||'').trim()||'Moderator';const candidate=($('millionaireCandidate')?.value||'').trim();
+ if(!candidate){alert('Bitte einen Kandidatennamen eingeben.');return}
+ millionaireState={moderator,candidate,index:0,used5050:false,usedAudience:false,hidden:[],ended:false};renderMillionaire();
+}
+function renderMillionaire(){
+ const s=millionaireState;const q=millionaireQuestions[s.index];const prize= n=>new Intl.NumberFormat('de-DE').format(n)+' €';
+ $('modeLabel').textContent='WER WIRD MILLIONÄR?';$('modalTitle').textContent=s.ended?'Show beendet':'Frage '+(s.index+1)+' von 15';
+ const ladder= millionaireLadder.map((v,i)=>`<div class="rule" style="padding:6px 10px;${i===s.index?'background:rgba(155,92,255,.22);border:1px solid #a66cff;':''}"><span>${i+1}.</span><b style="flex:1">${prize(v)}</b>${i===s.index?'<span>◀</span>':''}</div>`).reverse().join('');
+ if(s.ended){$('body').innerHTML=`<div class="subpanel"><div class="icon">${s.won?'🏆':'🔔'}</div><h2>${s.won?'Eine Million Euro!':'Das Spiel ist vorbei'}</h2><p>${escapeHtml(s.message||'Danke fürs Mitspielen!')}</p><p><b>Moderator:</b> ${escapeHtml(s.moderator)} · <b>Kandidat:</b> ${escapeHtml(s.candidate)}</p><h3>Erreichte Gewinnstufe: ${prize(s.prize||0)}</h3></div><div class="row"><button class="btn" onclick="openMillionaireSetup()">Neue Show →</button><button class="btn ghost" onclick="closeModal()">Schließen</button></div>`;return}
+ $('body').innerHTML=`<div class="gamegrid" style="grid-template-columns:minmax(0,1.5fr) minmax(190px,1fr)"><div><div class="eyebrow">KANDIDAT: ${escapeHtml(s.candidate)}</div><div class="subpanel"><h3 style="font-size:22px;line-height:1.35">${escapeHtml(q.q)}</h3><div class="gamegrid" style="grid-template-columns:repeat(2,minmax(0,1fr));margin-top:14px">${q.a.map((a,i)=>s.hidden.includes(i)?'':`<button class="btn secondary" style="min-height:58px;text-align:left;white-space:normal" onclick="answerMillionaire(${i})"><b>${'ABCD'[i]}:</b> ${escapeHtml(a)}</button>`).join('')}</div></div><div class="row" style="margin-top:12px"><button class="btn secondary" ${s.used5050?'disabled':''} onclick="useMillionaire5050()">🃏 50:50 ${s.used5050?'(benutzt)':''}</button><button class="btn secondary" ${s.usedAudience?'disabled':''} onclick="useMillionaireAudience()">🙋 Publikumsjoker ${s.usedAudience?'(benutzt)':''}</button></div><p class="muted">Moderator: ${escapeHtml(s.moderator)} · Bei falscher Antwort endet die Show sofort.</p></div><div class="subpanel"><h3>💰 Geldpegel</h3><div style="max-height:460px;overflow:auto">${ladder}</div></div></div>`;
+}
+function answerMillionaire(i){const s=millionaireState;const q=millionaireQuestions[s.index];if(i===q.c){if(s.index===14){s.ended=true;s.won=true;s.prize=1000000;s.message='Alle 15 Fragen richtig beantwortet!';renderMillionaire();return} s.index++;s.hidden=[];renderMillionaire();return} s.ended=true;s.won=false;s.prize=s.index>0?millionaireLadder[s.index-1]:0;s.message=`Leider falsch. Richtig wäre ${'ABCD'[q.c]}: ${q.a[q.c]}.`;renderMillionaire()}
+function useMillionaire5050(){const s=millionaireState;if(s.used5050)return;const q=millionaireQuestions[s.index];s.used5050=true;s.hidden=[0,1,2,3].filter(i=>i!==q.c).sort(()=>Math.random()-.5).slice(0,2);renderMillionaire()}
+function useMillionaireAudience(){const s=millionaireState;if(s.usedAudience)return;s.usedAudience=true;const q=millionaireQuestions[s.index];const wrong=[0,1,2,3].filter(i=>i!==q.c);const pct=[0,0,0,0];pct[q.c]=Math.floor(55+Math.random()*30);let left=100-pct[q.c];wrong.forEach((i,n)=>{pct[i]=n===2?left:Math.floor(Math.random()*(left+1));left-=pct[i]});alert('Publikumsabstimmung (Demo):\n'+q.a.map((a,i)=>`${'ABCD'[i]}: ${pct[i]}%`).join('\n'));renderMillionaire()}
+
 function openGameSelect(game){
  $('overlay').classList.add('show');
  if(game==='estimate'){openEstimateSetup();return}
+ if(game==='millionaire'){openMillionaireSetup();return}
  $('modeLabel').textContent='SPIEL AUSWÄHLEN';$('modalTitle').textContent='Der Dümmste fliegt';
  $('body').innerHTML=`<p>Wie soll die Runde laufen? Beide Modi nutzen dieselben Herzen- und Voting-Regeln.</p><div class="gamegrid"><div class="subpanel"><div class="icon">🎙️</div><h3>Moderator-Modus</h3><p>Eine Person gibt Hinweise, startet Chaos-Events und steuert den Timer.</p><button class="btn" onclick="openSetup('mod')">Mit Moderator spielen →</button></div><div class="subpanel"><div class="icon">⚡</div><h3>Chaos-Modus</h3><p>Timer, Hinweise, Events und Voting laufen automatisch ab.</p><button class="btn secondary" onclick="openSetup('auto')">Automatisch spielen →</button></div></div><div class="rules-mode-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px;margin-top:16px">
   <details class="rules-drawer" open>
